@@ -1,0 +1,32 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Lolinet - Lolicon の 天国
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<h1>Đăng nhập</h1>
+<br>
+<br>
+<br>
+<form action="." method="POST">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <br>
+    <br>
+    <!--<input type="hidden" name="next" value="/userlog"/>-->
+    <input type="submit" value="Đăng nhập"/>
+</form>
+
+{% endblock %}                    
+                    
+                    
+                    
+                    
+                    
+                    

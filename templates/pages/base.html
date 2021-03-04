@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %} <!-- load static-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="{% static 'css/bootstrap.min.css' %}" type="text/css"> <!-- ket noi toi css-->
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <style>
+        .div{
+          cursor:url(../static/images/tt.png),auto;
+        }
+        html,body{
+            background-color: #ffffff;
+            height:100%;
+            background-image:url(../static/images/lolib.png);
+            background-repeat:no-repeat;
+            background-position:right bottom;
+            background-attachment:fixed;
+            width: auto !important;
+            overflow-x: hidden !important;
+        }
+        nav {
+            justify-content: space-between;
+            display: flex;
+        }
+        ul {
+            display: flex;
+            margin: 5px 5px 0 0;
+            padding: 0;
+            transition: margin .2s;
+        }
+        li a {
+            display: block;
+            padding: 10px 20px;
+        }
+        li:not(:last-child) {
+            margin-right: 20px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background: rgb(132, 178, 230);
+        }
+        a{
+            text-decoration: none;
+            background-color:rgb(255, 250, 250,0.3);
+        }
+        .dropdown-content{
+            display: none;
+            position: fixed;
+            background-color: rgb(104, 180, 243);
+            min-width: 130px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            right: 0;
+        }
+        .dropdown:hover .dropdown-content
+        {
+            display: block;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn{
+            background-color: rgb(255, 168, 168);
+            color: rgb(0, 25, 252);
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover{
+            background-color: blue;
+        }
+        @media screen and (min-width: 721px) {
+            .bs-slidebar a {
+                height: 95%;
+                max-width: 200px;
+            }
+        }
+        @media screen and (max-width: 720px) {
+            .bs-slidebar a{
+                display: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header" style="background-color: rgb(255, 168, 168); max-height: 70px;position: fixed;width:100%;">
+        <nav class="nav flex-container">
+            <a href="/home" class="logo"><img src="{% static 'images/asd.gif' %}" class = "responesive-img" style="max-height:70px;"></a>
+            <ul  class="nav flex-container">
+                <li><a href="/home"><h1 style="font-family: 'Courier New', Courier, monospace;color:#3e6bff;">Lolinet</h1></a></li>   
+            </ul>
+            <div class="dropdown" >
+                <button class="dropbtn" style="max-height: 70px">☰</button>
+                <div class="dropdown-content">
+                    <a href="/login">Đăng Nhập</a>
+                    <a href="/register">Đăng ký</a>
+                    <a href="/family">Internet cho gia đình</a>
+                    <a href="/compa">Internet cho doanh nghiệp</a>
+                    <a href="/spec">Các dịch vụ đặc biệt</a>
+                    <a href="/searchct">Gói hỗ trợ theo vùng</a>
+                    <a href="/timkiem">Tìm kiếm gói</a>
+                </div>
+            </div>
+        </nav>  
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid" style="min-height: 95%;">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="bs-slidebar" style="border: 3px groove #ff8a8a;background-color: rgb(248, 248, 248,0.8);background-image: url(../static/images/slii.png);height: 100%;">
+                    <ul class="nav flex-column">
+                        <center><li><a href="/family" style="color:black;font-weight: bold;">Internet cho gia đình</a></li></center>
+                        <center><li><a href="/compa" style="color:black;font-weight: bold;">Internet cho doanh nghiệp</a></li></center>
+                        <center><li><a href="/spec" style="color:black;font-weight: bold;">Các dịch vụ đặc biệt</a></li></center>
+                        <center><li><a href="/searchct" style="color:black;font-weight: bold;">Gói hỗ trợ theo vùng</a></li></center>
+                        <center><li><a href="/timkiem" style="color:black;font-weight: bold;">Tìm kiếm gói</a></li></center>
+                        <center><li><a href="/logre" style="color:black;font-weight: bold;">Đăng ký gói</a></li></center>
+                        <center><li><a href="/logre" style="color:black;font-weight: bold;">Gia hạn gói</a></li></center>
+                        <center><li><a href="/logre" style="color:black;font-weight: bold;">Hủy gói</a></li></center>
+                        <center><li><a href="/logre" style="color:black;font-weight: bold;">Tra cứu tài khoản</a></li></center>
+                        <center><li><a href="/" style="color:black;font-weight: bold;">Contact</a></li></center>
+                        <center><li><a href="/" style="color:black;font-weight: bold;">Đăng ký làm lolicon</a></li></center>
+                    </ul>   <!--the nav giu nguyen trang thai-->
+                </div>
+            </div>
+            <div class="col-sm-10" style="background-color: rgb(255, 255, 255,0.6);">
+                <div class="container-fluid">
+                    
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--chiem 95% de footer nam o duoi-->
+    <div class="row">
+        <footer>  <!--hien o duoi-->
+            <div class="container-fluid">
+                <a href="#">Facebook</a>|<a href="#">Google</a>|<a href="#">Twiter</a>
+            </div>
+        </footer>
+    </div>   
+</body>
+</html>
