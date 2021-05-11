@@ -1,0 +1,23 @@
+{% extends "pages/base.html" %}
+{% block title %}
+Đăng ký
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<h1>Đăng ký</h1>
+<br>
+<br>
+<br>
+
+<form action="." method="POST">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="Đăng ký"/>
+</form>
+
+{% endblock content %}
