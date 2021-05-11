@@ -9,11 +9,10 @@ Search the information of various internet providers on the homepage, select the
 This site is easy to use and user-friendly. You can use both a personal computer and a mobile phone.
 
 
-（目的）
+- （目的）
 ネット提供会社にインターネットサービスを簡単に登録できるウエブサイトです。
 
-（説明）
+- （説明）
 ホームページで色々なネット提供会社の情報を検索して、自分のニーズに合った会社を選び、ネットサービスを登録します。サービスの延長、解約、毎月の費用などをしたい場合は直接ホームページで実施します。
-
-（こだわりポイント）
+-（こだわりポイント）
 使い方が簡単で使用者に優しいサイトです。パソコンも携帯も使えます。
